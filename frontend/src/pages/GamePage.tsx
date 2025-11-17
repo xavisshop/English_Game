@@ -101,7 +101,7 @@ const GamePage = () => {
 
     // Generate options
     const otherWords = mockWords.filter((_, index) => index !== randomIndex);
-    const randomOptions = [];
+    const randomOptions: { word: string; definition: string }[] = [];
     while (randomOptions.length < 3) {
       const randomOptionIndex = Math.floor(Math.random() * otherWords.length);
       const option = otherWords[randomOptionIndex];
